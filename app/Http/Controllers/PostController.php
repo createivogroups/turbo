@@ -21,7 +21,7 @@ class PostController extends Controller implements HasMiddleware
 
     public function index()
     {
-        $posts = Post::with('user')->latest()->paginate(6) ;
+        $posts = Post::with('user')->latest()->paginate(6);
         return view('index', ['posts' => $posts]);
     }
 
